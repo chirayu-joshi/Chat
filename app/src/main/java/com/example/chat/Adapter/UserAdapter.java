@@ -124,10 +124,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                     Chat chat = snapshot.getValue(Chat.class);
                     try {
                         if (chat.getReceiver().equals(firebaseUser.getUid()) && chat.getSender().equals(userid) ||
-                                chat.getReceiver().equals(userid) && chat.getSender().equals(firebaseUser.getUid()) ) {
+                                chat.getReceiver().equals(userid) && chat.getSender().equals(firebaseUser.getUid())) {
                             theLastMessage = chat.getMessage();
                         }
-                    } catch (Exception e) { }
+                    } catch (Exception e) {
+                    }
                 }
 
                 switch (theLastMessage) {
@@ -135,9 +136,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                         last_msg.setText("No Message");
                         break;
 
-                        default:
-                            last_msg.setText(theLastMessage);
-                            break;
+                    default:
+                        last_msg.setText(theLastMessage);
+                        break;
                 }
                 theLastMessage = "default";
             }

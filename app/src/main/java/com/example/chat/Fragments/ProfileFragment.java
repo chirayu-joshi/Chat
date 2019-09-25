@@ -116,7 +116,7 @@ public class ProfileFragment extends Fragment {
 
         if (imageUri != null) {
             final StorageReference fileReference = storageReference.child(System.currentTimeMillis()
-            + "." + getFileExtension(imageUri));
+                    + "." + getFileExtension(imageUri));
             uploadTask = fileReference.putFile(imageUri);
             uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                 @Override
@@ -161,7 +161,7 @@ public class ProfileFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == IMAGE_REQUEST && resultCode == RESULT_OK
-            && data != null && data.getData() != null) {
+                && data != null && data.getData() != null) {
             imageUri = data.getData();
 
             if (uploadTask != null && uploadTask.isInProgress()) {

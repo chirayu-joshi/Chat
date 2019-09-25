@@ -32,7 +32,7 @@
         android:layout_below="@id/username"
         android:layout_marginTop="10dp"
         android:layout_marginStart="-15dp"
-        android:layout_toEndOf="@id/profile_image"/>
+        android:layout_toEndOf="@id/profile_image" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_off"
@@ -45,7 +45,7 @@
         android:layout_below="@id/username"
         android:layout_marginTop="10dp"
         android:layout_marginStart="-15dp"
-        android:layout_toEndOf="@id/profile_image"/>
+        android:layout_toEndOf="@id/profile_image" />
 
     <TextView
         android:id="@+id/last_msg"
